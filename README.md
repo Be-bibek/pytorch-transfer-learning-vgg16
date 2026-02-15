@@ -1,5 +1,6 @@
 # 🍎 FruitFresh-AI: Automated Quality Assessment using Deep Learning
 
+![GitHub repo size](https://img.shields.io/github/repo-size/Be-bibek/pytorch-transfer-learning-vgg16)
 [![NVIDIA DLI](https://img.shields.io/badge/NVIDIA-Deep%20Learning%20Institute-76B900?logo=nvidia&logoColor=white)](https://www.nvidia.com/en-us/training/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
