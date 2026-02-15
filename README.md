@@ -29,6 +29,24 @@ Rather than training a massive network from scratch, I applied **Transfer Learni
 * **Freezing:** I disabled gradient updates for the convolutional base (`vgg_model.requires_grad_(False)`) to preserve the ImageNet knowledge.
 * **Custom Head:** I appended a new classifier consisting of Linear (Dense) layers and ReLU activations tailored for my 6 specific classes.
 
+### 3. Reusable Convolutional Block
+```bash
+class MyConvBlock(nn.Module):
+    def __init__(self, in_ch, out_ch, dropout_p):
+        super().__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(in_ch, out_ch, kernel_size=3, padding=1),
+            nn.BatchNorm2d(out_ch),
+            nn.ReLU(),
+            nn.Dropout(dropout_p),
+            nn.MaxPool2d(2)
+        )
+
+    def forward(self, x):
+        return self.model(x)
+
+
+```
 ---
 
 ## 📊 Detailed Training Logic (Step-by-Step)
